@@ -1,0 +1,963 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sort_data" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="654,259" sap2010:WorkflowViewState.IdRef="Sort_data_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="66">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sort_data" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_Column" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;Nombres&quot;,&quot;Años&quot;,&quot;Frutas&quot;}]" Name="Arry_Column" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart DisplayName="Flowchart Sort_Data" sap:VirtualizedContainerService.HintSize="1018,679" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">400,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">430,77.5 430,116</av:PointCollection>
+          <x:Double x:Key="Width">984</x:Double>
+          <x:Double x:Key="Height">643</x:Double>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID18</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID18">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">330,116</av:Point>
+            <av:Size x:Key="ShapeSize">200,108</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">430,224 430,254 427.5,254 427.5,256.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InputDialog OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Dialogo de entrada donde el usuario debe seleccionar la columna que desea ordenar" DisplayName="Dialogo Colum a ordernar" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="What is the column you would like to sort?" Options="[Arry_Column]" Title="Column to sort">
+          <ui:InputDialog.Result>
+            <OutArgument x:TypeArguments="x:String">[str_Column]</OutArgument>
+          </ui:InputDialog.Result>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InputDialog>
+        <FlowStep.Next>
+          <FlowDecision x:Name="__ReferenceID19" Condition="[str_Column =&quot;Nombres&quot;]" DisplayName="Nombre" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <av:Point x:Key="ShapeLocation">375,256.5</av:Point>
+                <av:Size x:Key="ShapeSize">70,87</av:Size>
+                <av:PointCollection x:Key="FalseConnector">445,300 470,300 470,356.5 410,356.5 410,386.5</av:PointCollection>
+                <av:PointCollection x:Key="TrueConnector">375,300 345,300 345,280 210,280</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <FlowDecision.True>
+              <FlowStep x:Name="__ReferenceID22">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">10,254.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Flowchart DisplayName="NombreFlowchart" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+                  <Flowchart.Variables>
+                    <Variable x:TypeArguments="x:String" Name="str_orderNombre" />
+                    <Variable x:TypeArguments="s:String[]" Default="[{&quot;Sort from A - Z&quot;,&quot;Sort from Z - A&quot;}]" Name="Arry_OrderNombre" />
+                  </Flowchart.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">500,2.5</av:Point>
+                      <av:Size x:Key="ShapeSize">60,75</av:Size>
+                      <x:Double x:Key="Width">1220</x:Double>
+                      <av:PointCollection x:Key="ConnectorLocation">530,77.5 530,144.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Flowchart.StartNode>
+                    <x:Reference>__ReferenceID1</x:Reference>
+                  </Flowchart.StartNode>
+                  <FlowDecision x:Name="__ReferenceID0" Condition="[str_orderNombre=&quot;Sort from Z - A&quot;]" DisplayName="Z a A" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">490.5,246.5</av:Point>
+                        <av:Size x:Key="ShapeSize">70,87</av:Size>
+                        <av:PointCollection x:Key="FalseConnector">560.5,290 585.5,290 585.5,346.5 525.5,346.5 525.5,376.5</av:PointCollection>
+                        <av:PointCollection x:Key="TrueConnector">490.5,290 300,290</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">100,257</av:Point>
+                            <av:Size x:Key="ShapeSize">200,66</av:Size>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Z a la A Nombre" sap:VirtualizedContainerService.HintSize="476,1651" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abre el excel a usar" AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Ejercicio_VB.xlsx - Excel" sap:VirtualizedContainerService.HintSize="434,1559" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,1239" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Agrega el rango donde se encuentra la columna Nombre" ClickBeforeMode="Single" DisplayName="Agregar rango Nombre Z a la A" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,258" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Text="A:A" Version="V1">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="17, 165, 77, 18" FriendlyName="'editar 1001'" FullSelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' role='editar' /&gt;" Guid="9d8e5464-deb2-448f-808f-106fd8d3f0b7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVFhH7ZbJDcQgEAQdHLlMKoRCIiRCIrOAL7BgJez+TZfEg+NVmm57U/IZSgRAiQAoEQAlAqBEAJQIYCIxaRCnzvVLQtqvox+fG+WvRB+PbUdU70QvbymotHuDrEus0nxWefKQapAXk1jSXGJcRO7vGOcho05sp+8UmZeE/No2LzvxvktBskzGecBcYpXWTR8jvT6J9femiXb90Mz70wILnXhP29WHj3OrTCSSFSgRACUCoEQAlAiAEj+j+gPPW1PIRHkFBwAAAABJRU5ErkJggg==" InformativeScreenshot="0d6fab28a9558abc443267c727d20399.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Acceso rapido ENTER Nombre Z a la A" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_12" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Realiza una alternativa sin necesidad de utilizar tantos clicks y selecciona el ordenamiento desceado" ClickBeforeMode="None" DisplayName="Proceso a tecla a ordenar Nombre Z a la A" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Shortcuts="[d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]o[u(hk)][d(hk)]d[u(hk)][d(hk)]r[u(hk)][d(hk)]r[u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NKeyboardShortcuts>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Guardar Nombre Z a la A'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="44, 8, 22, 22" FriendlyName="'Guardar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' role='Botón' automationid='' check:fulltext='Guardar' /&gt;" Guid="f6ddc130-407f-43be-ab88-17ac193d2f05" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVEhLYxh+4D+dwKhFZAOcFnVGriYL4wIELSIWjFoEB8PXooPLL0NFcIOTm29QbhGpGBcYXBYRAsSoHZwW4TIMm1p0MPAWHV59FcUAYjEugNMiaoNRi8gGw82i//8B/Dga0zA+DXwAAAAASUVORK5CYII=" InformativeScreenshot="702ad8e888cdbdf35e6154f1a7b71084.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Cerrar Nombre Z a la A'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="1345, 8, 29, 22" FriendlyName="'Cerrar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' role='Botón' automationid='' check:fulltext='Cerrar' /&gt;" Guid="c618a4fd-984f-4f18-bd2b-e5119a048db1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAaCAYAAAA5WTUBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7ZXpbsJADIT91jwzZ0iAQMKRashYeA8WQ6O2PzqSBcr6+BbsWP6lGn5RRAghbrfbsF6vh/l8HljTNPQoC/FVVSXxdV3TIxQRHhBIsN1ukwR45hHid7tdEr/ZbO5nORFhhIDTfr9PEuBXeZbACj5t2ybxq9VquF6v9EpFBBEkOJ1O2QSXy4XuZeXiF4vFy3giiHRdl03Q9z1dyzqfz3f/OB55X4kIIsvlMkgAOx6PdEs1m834bbjf1MbjDJ+Hw4EeZRFBRBOooTeeCUXU8F+j6TTOnnlFhBDCMwm22HcAICI8IHArj9DItqg1zyRZEWGEwCiWRslKRzEG8MZbEWFsTO8k2EmKIT4REUQw4x7ZUYwB1N4VEXwLDKOoO8UW1Umyz94REV5D4L/WnWKLxUvNnnlFhDIEuh3FtA8UBJsyNwnvAEBEKEPgzWcBYN6l5hERnkPg1R0DYJLQoFOJCHkIjGwMgMnwTpJXREghcFOs8RigtNQ+FRHG94QaCtmlpIZn1m8KCyBwS7W4uBp6wfpNYQFEruhP2B+DEPkC5oEPSmAmubgAAAAASUVORK5CYII=" InformativeScreenshot="f89529695938b74ce8affd2c9d00b00c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="-8, -8, 1382, 744" Arguments="c:\users\artur\desktop\2da evaluacion\documents\ejercicio_vb.xlsx" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVFhH7Zc9SEJRGIZdo9B+pRoShwhChIoQhCBbgsgpGgJpKyKIaAmClqDBoSmyLQikrbaCppaksdvUGDQ1FjQ0fvlezpGjfefcn86FkF548Hr4vvO+nh/U2L+8lK6uO3XIL1O1gyA4wkYvzsQEY2JE2OjFmZjgTEwIG704ExOciQlhoxdnYoIzMSFs9Bo5LpEXqcpq+ADd+wWnDoWhZ3eWBjYKbojfBGAn90vH/CjFt/ON9zKIX/5WgNRhke5fnlz2bk4a4zOVtcY4ntUe6ytw+nBJ0MfXpxsIYzCG8Npabz0ATGEOle/OafFsx32GskcrTbUgkjOweVV2DRFEfnqE4WojO4TSGHp9f2NrQGQBrp9rwp7fe0l8OkXJpQkaLOVcuBoTbAC579gCeR6wLVyt9QA4hFhyCPsOIPVWqFgPwF1DGeji8bapFlgNoF45dcnlrYBQo/ZEcgaC0BYBQn8dJ7byPwIERfzs0KtzfIh0dGWGKZFLRxugd26MvEguT7KT+0HY6NW3kCET/cUsO7FfhI1eXJNNhI1eXJNNhI1e9SKntcki3n/N2lyx2De7iUsgzKBEqQAAAABJRU5ErkJggg==" InformativeScreenshot="23b63b261168e7f3418baeae6f2f7b35.png" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel'/&gt;" />
+                            </uix:NApplicationCard.TargetApp>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                      </FlowStep>
+                    </FlowDecision.True>
+                    <FlowDecision.False>
+                      <FlowDecision x:Name="__ReferenceID3" Condition="[str_orderNombre=&quot;Sort from A - Z&quot;]" DisplayName="A a Z" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <av:Point x:Key="ShapeLocation">490.5,376.5</av:Point>
+                            <av:Size x:Key="ShapeSize">70,87</av:Size>
+                            <av:PointCollection x:Key="FalseConnector">560.5,420 780,420 780,365.5</av:PointCollection>
+                            <av:PointCollection x:Key="TrueConnector">490.5,420 300,420</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <FlowDecision.True>
+                          <FlowStep x:Name="__ReferenceID5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">100,387</av:Point>
+                                <av:Size x:Key="ShapeSize">200,66</av:Size>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="A a la Z Nombre" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abre excel desceado a ordenar" AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Ejercicio_VB.xlsx - Excel" sap:VirtualizedContainerService.HintSize="434,1517" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,1197" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Selecciona la columna a ordenar Nombre" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Text="A:A" Version="V1">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="17, 165, 77, 18" FriendlyName="'editar 1001'" FullSelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' role='editar' /&gt;" Guid="9d8e5464-deb2-448f-808f-106fd8d3f0b7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVFhH7ZbJDcQgEAQdHLlMKoRCIiRCIrOAL7BgJez+TZfEg+NVmm57U/IZSgRAiQAoEQAlAqBEAJQIYCIxaRCnzvVLQtqvox+fG+WvRB+PbUdU70QvbymotHuDrEus0nxWefKQapAXk1jSXGJcRO7vGOcho05sp+8UmZeE/No2LzvxvktBskzGecBcYpXWTR8jvT6J9femiXb90Mz70wILnXhP29WHj3OrTCSSFSgRACUCoEQAlAiAEj+j+gPPW1PIRHkFBwAAAABJRU5ErkJggg==" InformativeScreenshot="0d6fab28a9558abc443267c727d20399.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard enter Nombre" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_13" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Realiza una alternativa sin necesidad de utilizar tantos clicks y selecciona el ordenamiento desceado" ClickBeforeMode="None" DisplayName="Keyboard accion rapida Nombre" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" Shortcuts="[d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]o[u(hk)][d(hk)]d[u(hk)][d(hk)]r[u(hk)][d(hk)]d[u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NKeyboardShortcuts>
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Guardar Nombre'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="44, 8, 22, 22" FriendlyName="'Guardar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' role='Botón' automationid='' check:fulltext='Guardar' /&gt;" Guid="f6ddc130-407f-43be-ab88-17ac193d2f05" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVEhLYxh+4D+dwKhFZAOcFnVGriYL4wIELSIWjFoEB8PXooPLL0NFcIOTm29QbhGpGBcYXBYRAsSoHZwW4TIMm1p0MPAWHV59FcUAYjEugNMiaoNRi8gGw82i//8B/Dga0zA+DXwAAAAASUVORK5CYII=" InformativeScreenshot="702ad8e888cdbdf35e6154f1a7b71084.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Cerrar Nombre'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="1345, 8, 29, 22" FriendlyName="'Cerrar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' role='Botón' automationid='' check:fulltext='Cerrar' /&gt;" Guid="c618a4fd-984f-4f18-bd2b-e5119a048db1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAaCAYAAAA5WTUBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7ZXpbsJADIT91jwzZ0iAQMKRashYeA8WQ6O2PzqSBcr6+BbsWP6lGn5RRAghbrfbsF6vh/l8HljTNPQoC/FVVSXxdV3TIxQRHhBIsN1ukwR45hHid7tdEr/ZbO5nORFhhIDTfr9PEuBXeZbACj5t2ybxq9VquF6v9EpFBBEkOJ1O2QSXy4XuZeXiF4vFy3giiHRdl03Q9z1dyzqfz3f/OB55X4kIIsvlMkgAOx6PdEs1m834bbjf1MbjDJ+Hw4EeZRFBRBOooTeeCUXU8F+j6TTOnnlFhBDCMwm22HcAICI8IHArj9DItqg1zyRZEWGEwCiWRslKRzEG8MZbEWFsTO8k2EmKIT4REUQw4x7ZUYwB1N4VEXwLDKOoO8UW1Umyz94REV5D4L/WnWKLxUvNnnlFhDIEuh3FtA8UBJsyNwnvAEBEKEPgzWcBYN6l5hERnkPg1R0DYJLQoFOJCHkIjGwMgMnwTpJXREghcFOs8RigtNQ+FRHG94QaCtmlpIZn1m8KCyBwS7W4uBp6wfpNYQFEruhP2B+DEPkC5oEPSmAmubgAAAAASUVORK5CYII=" InformativeScreenshot="f89529695938b74ce8affd2c9d00b00c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp Area="-8, -8, 1382, 744" Arguments="c:\users\artur\desktop\2da evaluacion\documents\ejercicio_vb.xlsx" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVFhH7Zc9SEJRGIZdo9B+pRoShwhChIoQhCBbgsgpGgJpKyKIaAmClqDBoSmyLQikrbaCppaksdvUGDQ1FjQ0fvlezpGjfefcn86FkF548Hr4vvO+nh/U2L+8lK6uO3XIL1O1gyA4wkYvzsQEY2JE2OjFmZjgTEwIG704ExOciQlhoxdnYoIzMSFs9Bo5LpEXqcpq+ADd+wWnDoWhZ3eWBjYKbojfBGAn90vH/CjFt/ON9zKIX/5WgNRhke5fnlz2bk4a4zOVtcY4ntUe6ytw+nBJ0MfXpxsIYzCG8Npabz0ATGEOle/OafFsx32GskcrTbUgkjOweVV2DRFEfnqE4WojO4TSGHp9f2NrQGQBrp9rwp7fe0l8OkXJpQkaLOVcuBoTbAC579gCeR6wLVyt9QA4hFhyCPsOIPVWqFgPwF1DGeji8bapFlgNoF45dcnlrYBQo/ZEcgaC0BYBQn8dJ7byPwIERfzs0KtzfIh0dGWGKZFLRxugd26MvEguT7KT+0HY6NW3kCET/cUsO7FfhI1eXJNNhI1eXJNNhI1e9SKntcki3n/N2lyx2De7iUsgzKBEqQAAAABJRU5ErkJggg==" InformativeScreenshot="23b63b261168e7f3418baeae6f2f7b35.png" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel'/&gt;" />
+                                </uix:NApplicationCard.TargetApp>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NApplicationCard>
+                            </Sequence>
+                          </FlowStep>
+                        </FlowDecision.True>
+                        <FlowDecision.False>
+                          <FlowStep x:Name="__ReferenceID4">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">680,314.5</av:Point>
+                                <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">780,314.5 780,191 630,191</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Bug alert Nombre" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Please select a box&quot;]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:MessageBox>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID1">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">430,144.5</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,93</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">530,237.5 525.5,237.5 525.5,246.5</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:InputDialog OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Selecciona el orden que desea tener, A a la Z o Z a la A" DisplayName="Input Dialog Nombre" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Choose the order" Options="[Arry_OrderNombre]" Title="Order type">
+                                  <ui:InputDialog.Result>
+                                    <OutArgument x:TypeArguments="x:String">[str_orderNombre]</OutArgument>
+                                  </ui:InputDialog.Result>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:InputDialog>
+                                <FlowStep.Next>
+                                  <x:Reference>__ReferenceID0</x:Reference>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowDecision.False>
+                      </FlowDecision>
+                    </FlowDecision.False>
+                  </FlowDecision>
+                  <x:Reference>__ReferenceID1</x:Reference>
+                  <x:Reference>__ReferenceID2</x:Reference>
+                  <x:Reference>__ReferenceID3</x:Reference>
+                  <x:Reference>__ReferenceID4</x:Reference>
+                  <x:Reference>__ReferenceID5</x:Reference>
+                </Flowchart>
+              </FlowStep>
+            </FlowDecision.True>
+            <FlowDecision.False>
+              <FlowDecision x:Name="__ReferenceID20" Condition="[str_Column =&quot;Años&quot;]" DisplayName="Años" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">375,386.5</av:Point>
+                    <av:Size x:Key="ShapeSize">70,87</av:Size>
+                    <av:PointCollection x:Key="FalseConnector">445,430 475,430 475,496.5 420,496.5 420,526.5</av:PointCollection>
+                    <av:PointCollection x:Key="TrueConnector">375,430 345,430 345,410 210,410</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <FlowDecision.True>
+                  <FlowStep x:Name="__ReferenceID23">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">10,384.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Flowchart DisplayName="AñosFlowchart" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_6">
+                      <Flowchart.Variables>
+                        <Variable x:TypeArguments="s:String[]" Default="[{&quot;High to low&quot;, &quot;Low to high&quot;}]" Name="Arry_OrderAños" />
+                        <Variable x:TypeArguments="x:String" Name="str_orderAños" />
+                      </Flowchart.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">500,2.5</av:Point>
+                          <av:Size x:Key="ShapeSize">60,75</av:Size>
+                          <x:Double x:Key="Width">1220</x:Double>
+                          <av:PointCollection x:Key="ConnectorLocation">530,77.5 520,77.5 520,98.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Flowchart.StartNode>
+                        <x:Reference>__ReferenceID7</x:Reference>
+                      </Flowchart.StartNode>
+                      <FlowDecision x:Name="__ReferenceID6" Condition="[str_orderAños=&quot;Low to high&quot;]" DisplayName="Low to high" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <av:Point x:Key="ShapeLocation">490.5,246.5</av:Point>
+                            <av:Size x:Key="ShapeSize">70,87</av:Size>
+                            <av:PointCollection x:Key="FalseConnector">560.5,290 585.5,290 585.5,346.5 525.5,346.5 525.5,376.5</av:PointCollection>
+                            <av:PointCollection x:Key="TrueConnector">490.5,290 300,290</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <FlowDecision.True>
+                          <FlowStep x:Name="__ReferenceID11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">100,257</av:Point>
+                                <av:Size x:Key="ShapeSize">200,66</av:Size>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Menor a mayor Años" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abrir el excel que se desea ordenar" AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Ejercicio_VB.xlsx - Excel" sap:VirtualizedContainerService.HintSize="434,1766" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" ScopeGuid="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,1446" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Seleccionar la columna a ordenar" ClickBeforeMode="Single" DisplayName="Seleccionar la columna Menor a mayor Años" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,247" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Text="B:B" Version="V1">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="17, 165, 77, 18" FriendlyName="'editar 1001'" FullSelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' role='editar' /&gt;" Guid="9d8e5464-deb2-448f-808f-106fd8d3f0b7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVFhH7ZbJDcQgEAQdHLlMKoRCIiRCIrOAL7BgJez+TZfEg+NVmm57U/IZSgRAiQAoEQAlAqBEAJQIYCIxaRCnzvVLQtqvox+fG+WvRB+PbUdU70QvbymotHuDrEus0nxWefKQapAXk1jSXGJcRO7vGOcho05sp+8UmZeE/No2LzvxvktBskzGecBcYpXWTR8jvT6J9femiXb90Mz70wILnXhP29WHj3OrTCSSFSgRACUCoEQAlAiAEj+j+gPPW1PIRHkFBwAAAABJRU5ErkJggg==" InformativeScreenshot="0d6fab28a9558abc443267c727d20399.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                        </uix:NTypeInto.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NTypeInto>
+                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard enter Menor a mayor Años" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Realiza una alternativa sin necesidad de utilizar tantos clicks y selecciona el ordenamiento deseado" ClickBeforeMode="None" DisplayName="Keyboard accion rapida Menor a mayor Años" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_17" Shortcuts="[d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]o[u(hk)][d(hk)]d[u(hk)][d(hk)]r[u(hk)][d(hk)]r[u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NKeyboardShortcuts>
+                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard enter con retraso Menor a mayor Años" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_18" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Guardar' Menor a mayor Años" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="44, 8, 22, 22" FriendlyName="'Guardar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' role='Botón' automationid='' check:fulltext='Guardar' /&gt;" Guid="f6ddc130-407f-43be-ab88-17ac193d2f05" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVEhLYxh+4D+dwKhFZAOcFnVGriYL4wIELSIWjFoEB8PXooPLL0NFcIOTm29QbhGpGBcYXBYRAsSoHZwW4TIMm1p0MPAWHV59FcUAYjEugNMiaoNRi8gGw82i//8B/Dga0zA+DXwAAAAASUVORK5CYII=" InformativeScreenshot="702ad8e888cdbdf35e6154f1a7b71084.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Cerrar' Menor a mayor Años" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="1345, 8, 29, 22" FriendlyName="'Cerrar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' role='Botón' automationid='' check:fulltext='Cerrar' /&gt;" Guid="c618a4fd-984f-4f18-bd2b-e5119a048db1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAaCAYAAAA5WTUBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7ZXpbsJADIT91jwzZ0iAQMKRashYeA8WQ6O2PzqSBcr6+BbsWP6lGn5RRAghbrfbsF6vh/l8HljTNPQoC/FVVSXxdV3TIxQRHhBIsN1ukwR45hHid7tdEr/ZbO5nORFhhIDTfr9PEuBXeZbACj5t2ybxq9VquF6v9EpFBBEkOJ1O2QSXy4XuZeXiF4vFy3giiHRdl03Q9z1dyzqfz3f/OB55X4kIIsvlMkgAOx6PdEs1m834bbjf1MbjDJ+Hw4EeZRFBRBOooTeeCUXU8F+j6TTOnnlFhBDCMwm22HcAICI8IHArj9DItqg1zyRZEWGEwCiWRslKRzEG8MZbEWFsTO8k2EmKIT4REUQw4x7ZUYwB1N4VEXwLDKOoO8UW1Umyz94REV5D4L/WnWKLxUvNnnlFhDIEuh3FtA8UBJsyNwnvAEBEKEPgzWcBYN6l5hERnkPg1R0DYJLQoFOJCHkIjGwMgMnwTpJXREghcFOs8RigtNQ+FRHG94QaCtmlpIZn1m8KCyBwS7W4uBp6wfpNYQFEruhP2B+DEPkC5oEPSmAmubgAAAAASUVORK5CYII=" InformativeScreenshot="f89529695938b74ce8affd2c9d00b00c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp Area="-8, -8, 1382, 744" Arguments="c:\users\artur\desktop\2da evaluacion\documents\ejercicio_vb.xlsx" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVFhH7Zc9SEJRGIZdo9B+pRoShwhChIoQhCBbgsgpGgJpKyKIaAmClqDBoSmyLQikrbaCppaksdvUGDQ1FjQ0fvlezpGjfefcn86FkF548Hr4vvO+nh/U2L+8lK6uO3XIL1O1gyA4wkYvzsQEY2JE2OjFmZjgTEwIG704ExOciQlhoxdnYoIzMSFs9Bo5LpEXqcpq+ADd+wWnDoWhZ3eWBjYKbojfBGAn90vH/CjFt/ON9zKIX/5WgNRhke5fnlz2bk4a4zOVtcY4ntUe6ytw+nBJ0MfXpxsIYzCG8Npabz0ATGEOle/OafFsx32GskcrTbUgkjOweVV2DRFEfnqE4WojO4TSGHp9f2NrQGQBrp9rwp7fe0l8OkXJpQkaLOVcuBoTbAC579gCeR6wLVyt9QA4hFhyCPsOIPVWqFgPwF1DGeji8bapFlgNoF45dcnlrYBQo/ZEcgaC0BYBQn8dJ7byPwIERfzs0KtzfIh0dGWGKZFLRxugd26MvEguT7KT+0HY6NW3kCET/cUsO7FfhI1eXJNNhI1eXJNNhI1e9SKntcki3n/N2lyx2De7iUsgzKBEqQAAAABJRU5ErkJggg==" InformativeScreenshot="23b63b261168e7f3418baeae6f2f7b35.png" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel'/&gt;" />
+                                </uix:NApplicationCard.TargetApp>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NApplicationCard>
+                            </Sequence>
+                          </FlowStep>
+                        </FlowDecision.True>
+                        <FlowDecision.False>
+                          <FlowDecision x:Name="__ReferenceID8" Condition="[str_orderAños=&quot;High to low&quot;]" DisplayName="High to low" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <av:Point x:Key="ShapeLocation">490.5,376.5</av:Point>
+                                <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                <av:PointCollection x:Key="FalseConnector">560.5,420 780,420 780,365.5</av:PointCollection>
+                                <av:PointCollection x:Key="TrueConnector">490.5,420 300,420</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <FlowDecision.True>
+                              <FlowStep x:Name="__ReferenceID10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">100,387</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">200,387 200,337</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Mayor a menor Años" sap:VirtualizedContainerService.HintSize="476,1858" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abrir el excel que se desea ordenar" AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Ejercicio_VB.xlsx - Excel" sap:VirtualizedContainerService.HintSize="434,1766" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                    <uix:NApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,1446" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Seleccionar la columna a ordenar" ClickBeforeMode="Single" DisplayName="agregar datos de la columna Mayor a menor Años'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,247" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Text="B:B" Version="V1">
+                                            <uix:NTypeInto.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="17, 165, 77, 18" FriendlyName="'editar 1001'" FullSelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' role='editar' /&gt;" Guid="9d8e5464-deb2-448f-808f-106fd8d3f0b7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVFhH7ZbJDcQgEAQdHLlMKoRCIiRCIrOAL7BgJez+TZfEg+NVmm57U/IZSgRAiQAoEQAlAqBEAJQIYCIxaRCnzvVLQtqvox+fG+WvRB+PbUdU70QvbymotHuDrEus0nxWefKQapAXk1jSXGJcRO7vGOcho05sp+8UmZeE/No2LzvxvktBskzGecBcYpXWTR8jvT6J9femiXb90Mz70wILnXhP29WHj3OrTCSSFSgRACUCoEQAlAiAEj+j+gPPW1PIRHkFBwAAAABJRU5ErkJggg==" InformativeScreenshot="0d6fab28a9558abc443267c727d20399.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                            </uix:NTypeInto.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NTypeInto>
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard enter Mayor a menor Años" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Realiza una alternativa sin necesidad de utilizar tantos clicks y selecciona el ordenamiento deseado" ClickBeforeMode="None" DisplayName="Keyboard accion rapida Mayor a menor Años" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_10" Shortcuts="[d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]o[u(hk)][d(hk)]d[u(hk)][d(hk)]r[u(hk)][d(hk)]d[u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NKeyboardShortcuts>
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard enter con delay Mayor a menor Años" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_19" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Guardar' Mayor a menor Años" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="44, 8, 22, 22" FriendlyName="'Guardar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' role='Botón' automationid='' check:fulltext='Guardar' /&gt;" Guid="f6ddc130-407f-43be-ab88-17ac193d2f05" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVEhLYxh+4D+dwKhFZAOcFnVGriYL4wIELSIWjFoEB8PXooPLL0NFcIOTm29QbhGpGBcYXBYRAsSoHZwW4TIMm1p0MPAWHV59FcUAYjEugNMiaoNRi8gGw82i//8B/Dga0zA+DXwAAAAASUVORK5CYII=" InformativeScreenshot="702ad8e888cdbdf35e6154f1a7b71084.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Cerrar' Mayor a menor Años" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1345, 8, 29, 22" FriendlyName="'Cerrar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' role='Botón' automationid='' check:fulltext='Cerrar' /&gt;" Guid="c618a4fd-984f-4f18-bd2b-e5119a048db1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAaCAYAAAA5WTUBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7ZXpbsJADIT91jwzZ0iAQMKRashYeA8WQ6O2PzqSBcr6+BbsWP6lGn5RRAghbrfbsF6vh/l8HljTNPQoC/FVVSXxdV3TIxQRHhBIsN1ukwR45hHid7tdEr/ZbO5nORFhhIDTfr9PEuBXeZbACj5t2ybxq9VquF6v9EpFBBEkOJ1O2QSXy4XuZeXiF4vFy3giiHRdl03Q9z1dyzqfz3f/OB55X4kIIsvlMkgAOx6PdEs1m834bbjf1MbjDJ+Hw4EeZRFBRBOooTeeCUXU8F+j6TTOnnlFhBDCMwm22HcAICI8IHArj9DItqg1zyRZEWGEwCiWRslKRzEG8MZbEWFsTO8k2EmKIT4REUQw4x7ZUYwB1N4VEXwLDKOoO8UW1Umyz94REV5D4L/WnWKLxUvNnnlFhDIEuh3FtA8UBJsyNwnvAEBEKEPgzWcBYN6l5hERnkPg1R0DYJLQoFOJCHkIjGwMgMnwTpJXREghcFOs8RigtNQ+FRHG94QaCtmlpIZn1m8KCyBwS7W4uBp6wfpNYQFEruhP2B+DEPkC5oEPSmAmubgAAAAASUVORK5CYII=" InformativeScreenshot="f89529695938b74ce8affd2c9d00b00c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </uix:NApplicationCard.Body>
+                                    <uix:NApplicationCard.TargetApp>
+                                      <uix:TargetApp Area="-8, -8, 1382, 744" Arguments="c:\users\artur\desktop\2da evaluacion\documents\ejercicio_vb.xlsx" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVFhH7Zc9SEJRGIZdo9B+pRoShwhChIoQhCBbgsgpGgJpKyKIaAmClqDBoSmyLQikrbaCppaksdvUGDQ1FjQ0fvlezpGjfefcn86FkF548Hr4vvO+nh/U2L+8lK6uO3XIL1O1gyA4wkYvzsQEY2JE2OjFmZjgTEwIG704ExOciQlhoxdnYoIzMSFs9Bo5LpEXqcpq+ADd+wWnDoWhZ3eWBjYKbojfBGAn90vH/CjFt/ON9zKIX/5WgNRhke5fnlz2bk4a4zOVtcY4ntUe6ytw+nBJ0MfXpxsIYzCG8Npabz0ATGEOle/OafFsx32GskcrTbUgkjOweVV2DRFEfnqE4WojO4TSGHp9f2NrQGQBrp9rwp7fe0l8OkXJpQkaLOVcuBoTbAC579gCeR6wLVyt9QA4hFhyCPsOIPVWqFgPwF1DGeji8bapFlgNoF45dcnlrYBQo/ZEcgaC0BYBQn8dJ7byPwIERfzs0KtzfIh0dGWGKZFLRxugd26MvEguT7KT+0HY6NW3kCET/cUsO7FfhI1eXJNNhI1eXJNNhI1e9SKntcki3n/N2lyx2De7iUsgzKBEqQAAAABJRU5ErkJggg==" InformativeScreenshot="23b63b261168e7f3418baeae6f2f7b35.png" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel'/&gt;" />
+                                    </uix:NApplicationCard.TargetApp>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NApplicationCard>
+                                </Sequence>
+                              </FlowStep>
+                            </FlowDecision.True>
+                            <FlowDecision.False>
+                              <FlowStep x:Name="__ReferenceID9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">680,314.5</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">680,340 650,340 650,160 620,160</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Bug alert Años" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Please select a box&quot;]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:MessageBox>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID7">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">420,98.5</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,123</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">520,221.5 520,246.5 525.5,246.5</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:InputDialog OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Pedirle al usuario que seleccione el orden que descea ordenar la columna Años" DisplayName="Input Dialog Años" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="InputDialog_9" IsPassword="False" Label="Choose the order" Options="[Arry_OrderAños]" Title="Order type">
+                                      <ui:InputDialog.Result>
+                                        <OutArgument x:TypeArguments="x:String">[str_orderAños]</OutArgument>
+                                      </ui:InputDialog.Result>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:InputDialog>
+                                    <FlowStep.Next>
+                                      <x:Reference>__ReferenceID6</x:Reference>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowDecision.False>
+                          </FlowDecision>
+                        </FlowDecision.False>
+                      </FlowDecision>
+                      <x:Reference>__ReferenceID7</x:Reference>
+                      <x:Reference>__ReferenceID8</x:Reference>
+                      <x:Reference>__ReferenceID9</x:Reference>
+                      <x:Reference>__ReferenceID10</x:Reference>
+                      <x:Reference>__ReferenceID11</x:Reference>
+                    </Flowchart>
+                  </FlowStep>
+                </FlowDecision.True>
+                <FlowDecision.False>
+                  <FlowDecision x:Name="__ReferenceID21" Condition="[str_Column =&quot;Frutas&quot;]" DisplayName="Frutas" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">385,526.5</av:Point>
+                        <av:Size x:Key="ShapeSize">70,87</av:Size>
+                        <av:PointCollection x:Key="TrueConnector">385,570 355,570 355,540 210,540</av:PointCollection>
+                        <av:PointCollection x:Key="FalseConnector">455,570 710,570 710,365.5</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID24">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">10,514.5</av:Point>
+                            <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Flowchart DisplayName="FrutasFlowchart" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_7">
+                          <Flowchart.Variables>
+                            <Variable x:TypeArguments="s:String[]" Default="[{&quot;Sort from A - Z&quot;,&quot;Sort from Z - A&quot;}]" Name="Arry_OrderFrutas" />
+                            <Variable x:TypeArguments="x:String" Name="str_orderFrutas" />
+                          </Flowchart.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <av:Point x:Key="ShapeLocation">500,2.5</av:Point>
+                              <av:Size x:Key="ShapeSize">60,75</av:Size>
+                              <x:Double x:Key="Width">1220</x:Double>
+                              <av:PointCollection x:Key="ConnectorLocation">530,77.5 530,144.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Flowchart.StartNode>
+                            <x:Reference>__ReferenceID13</x:Reference>
+                          </Flowchart.StartNode>
+                          <FlowDecision x:Name="__ReferenceID12" Condition="[str_orderFrutas=&quot;Sort from Z - A&quot;]" DisplayName="Z - A" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <av:Point x:Key="ShapeLocation">490.5,246.5</av:Point>
+                                <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                <av:PointCollection x:Key="FalseConnector">560.5,290 585.5,290 585.5,346.5 525.5,346.5 525.5,376.5</av:PointCollection>
+                                <av:PointCollection x:Key="TrueConnector">490.5,290 300,290</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <FlowDecision.True>
+                              <FlowStep x:Name="__ReferenceID14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">100,257</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Ordenar de Z a la A Frutas" sap:VirtualizedContainerService.HintSize="476,1640" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abrir la aplicacion deseada" AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Ejercicio_VB.xlsx - Excel" sap:VirtualizedContainerService.HintSize="434,1548" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                    <uix:NApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,1228" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Seleccionar la columna a ordenar" ClickBeforeMode="Single" DisplayName="Seleccionar columna  Z a la A Frutas" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,247" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Text="C:C" Version="V1">
+                                            <uix:NTypeInto.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="17, 165, 77, 18" FriendlyName="'editar 1001'" FullSelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' role='editar' /&gt;" Guid="9d8e5464-deb2-448f-808f-106fd8d3f0b7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVFhH7ZbJDcQgEAQdHLlMKoRCIiRCIrOAL7BgJez+TZfEg+NVmm57U/IZSgRAiQAoEQAlAqBEAJQIYCIxaRCnzvVLQtqvox+fG+WvRB+PbUdU70QvbymotHuDrEus0nxWefKQapAXk1jSXGJcRO7vGOcho05sp+8UmZeE/No2LzvxvktBskzGecBcYpXWTR8jvT6J9femiXb90Mz70wILnXhP29WHj3OrTCSSFSgRACUCoEQAlAiAEj+j+gPPW1PIRHkFBwAAAABJRU5ErkJggg==" InformativeScreenshot="0d6fab28a9558abc443267c727d20399.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                            </uix:NTypeInto.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NTypeInto>
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard enter  Z a la A Frutas" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Realiza una alternativa sin necesidad de utilizar tantos clicks y selecciona el ordenamiento deseado" ClickBeforeMode="None" DisplayName="Keyboard accion  rapida  Z a la A Frutas" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_11" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Shortcuts="[d(hk)][k(enter)][u(hk)][d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]o[u(hk)][d(hk)]d[u(hk)][d(hk)]r[u(hk)][d(hk)]r[u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NKeyboardShortcuts>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Guardar'  Z a la A Frutas" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="44, 8, 22, 22" FriendlyName="'Guardar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' role='Botón' automationid='' check:fulltext='Guardar' /&gt;" Guid="f6ddc130-407f-43be-ab88-17ac193d2f05" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVEhLYxh+4D+dwKhFZAOcFnVGriYL4wIELSIWjFoEB8PXooPLL0NFcIOTm29QbhGpGBcYXBYRAsSoHZwW4TIMm1p0MPAWHV59FcUAYjEugNMiaoNRi8gGw82i//8B/Dga0zA+DXwAAAAASUVORK5CYII=" InformativeScreenshot="702ad8e888cdbdf35e6154f1a7b71084.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Cerrar'  Z a la A Frutas" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="1345, 8, 29, 22" FriendlyName="'Cerrar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' role='Botón' automationid='' check:fulltext='Cerrar' /&gt;" Guid="c618a4fd-984f-4f18-bd2b-e5119a048db1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAaCAYAAAA5WTUBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7ZXpbsJADIT91jwzZ0iAQMKRashYeA8WQ6O2PzqSBcr6+BbsWP6lGn5RRAghbrfbsF6vh/l8HljTNPQoC/FVVSXxdV3TIxQRHhBIsN1ukwR45hHid7tdEr/ZbO5nORFhhIDTfr9PEuBXeZbACj5t2ybxq9VquF6v9EpFBBEkOJ1O2QSXy4XuZeXiF4vFy3giiHRdl03Q9z1dyzqfz3f/OB55X4kIIsvlMkgAOx6PdEs1m834bbjf1MbjDJ+Hw4EeZRFBRBOooTeeCUXU8F+j6TTOnnlFhBDCMwm22HcAICI8IHArj9DItqg1zyRZEWGEwCiWRslKRzEG8MZbEWFsTO8k2EmKIT4REUQw4x7ZUYwB1N4VEXwLDKOoO8UW1Umyz94REV5D4L/WnWKLxUvNnnlFhDIEuh3FtA8UBJsyNwnvAEBEKEPgzWcBYN6l5hERnkPg1R0DYJLQoFOJCHkIjGwMgMnwTpJXREghcFOs8RigtNQ+FRHG94QaCtmlpIZn1m8KCyBwS7W4uBp6wfpNYQFEruhP2B+DEPkC5oEPSmAmubgAAAAASUVORK5CYII=" InformativeScreenshot="f89529695938b74ce8affd2c9d00b00c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </uix:NApplicationCard.Body>
+                                    <uix:NApplicationCard.TargetApp>
+                                      <uix:TargetApp Area="-8, -8, 1382, 744" Arguments="c:\users\artur\desktop\2da evaluacion\documents\ejercicio_vb.xlsx" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVFhH7Zc9SEJRGIZdo9B+pRoShwhChIoQhCBbgsgpGgJpKyKIaAmClqDBoSmyLQikrbaCppaksdvUGDQ1FjQ0fvlezpGjfefcn86FkF548Hr4vvO+nh/U2L+8lK6uO3XIL1O1gyA4wkYvzsQEY2JE2OjFmZjgTEwIG704ExOciQlhoxdnYoIzMSFs9Bo5LpEXqcpq+ADd+wWnDoWhZ3eWBjYKbojfBGAn90vH/CjFt/ON9zKIX/5WgNRhke5fnlz2bk4a4zOVtcY4ntUe6ytw+nBJ0MfXpxsIYzCG8Npabz0ATGEOle/OafFsx32GskcrTbUgkjOweVV2DRFEfnqE4WojO4TSGHp9f2NrQGQBrp9rwp7fe0l8OkXJpQkaLOVcuBoTbAC579gCeR6wLVyt9QA4hFhyCPsOIPVWqFgPwF1DGeji8bapFlgNoF45dcnlrYBQo/ZEcgaC0BYBQn8dJ7byPwIERfzs0KtzfIh0dGWGKZFLRxugd26MvEguT7KT+0HY6NW3kCET/cUsO7FfhI1eXJNNhI1eXJNNhI1e9SKntcki3n/N2lyx2De7iUsgzKBEqQAAAABJRU5ErkJggg==" InformativeScreenshot="571d433e81d7671e4368b11717382f01.png" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel'/&gt;" />
+                                    </uix:NApplicationCard.TargetApp>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NApplicationCard>
+                                </Sequence>
+                              </FlowStep>
+                            </FlowDecision.True>
+                            <FlowDecision.False>
+                              <FlowDecision x:Name="__ReferenceID15" Condition="[str_orderFrutas=&quot;Sort from A - Z&quot;]" DisplayName="A - Z" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <av:Point x:Key="ShapeLocation">490.5,376.5</av:Point>
+                                    <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                    <av:PointCollection x:Key="FalseConnector">560.5,420 780,420 780,365.5</av:PointCollection>
+                                    <av:PointCollection x:Key="TrueConnector">490.5,420 300,420</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <FlowDecision.True>
+                                  <FlowStep x:Name="__ReferenceID17">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">100,387</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Sequence DisplayName="Ordenar de A a la Z Frutas" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abrir la aplicacion deseada" AttachMode="ByInstance" DisplayName="Utilizar Aplicación: Ejercicio_VB.xlsx - Excel" sap:VirtualizedContainerService.HintSize="434,1330" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" ScopeGuid="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                        <uix:NApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="x:Object">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,1010" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Seleccionar la columna " ClickBeforeMode="Single" DisplayName="Seleccionar la columna deseada A a la Z Frutas" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,247" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Text="C:C" Version="V1">
+                                                <uix:NTypeInto.Target>
+                                                  <uix:TargetAnchorable DesignTimeRectangle="17, 165, 77, 18" FriendlyName="'editar 1001'" FullSelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;uia automationid='13' cls='ComboBox' /&gt;&lt;uia automationid='1001' cls='Edit' role='editar' /&gt;" Guid="9d8e5464-deb2-448f-808f-106fd8d3f0b7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAWCAYAAAC40nDiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVFhH7ZbJDcQgEAQdHLlMKoRCIiRCIrOAL7BgJez+TZfEg+NVmm57U/IZSgRAiQAoEQAlAqBEAJQIYCIxaRCnzvVLQtqvox+fG+WvRB+PbUdU70QvbymotHuDrEus0nxWefKQapAXk1jSXGJcRO7vGOcho05sp+8UmZeE/No2LzvxvktBskzGecBcYpXWTR8jvT6J9femiXb90Mz70wILnXhP29WHj3OrTCSSFSgRACUCoEQAlAiAEj+j+gPPW1PIRHkFBwAAAABJRU5ErkJggg==" InformativeScreenshot="0d6fab28a9558abc443267c727d20399.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                                </uix:NTypeInto.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NTypeInto>
+                                              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Realiza una alternativa sin necesidad de utilizar tantos clicks y selecciona el ordenamiento deseado" ClickBeforeMode="None" DisplayName="Keyboard Accion rapida A a la Z Frutas" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Shortcuts="[d(hk)][k(enter)][u(hk)][d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]o[u(hk)][d(hk)]d[u(hk)][d(hk)]r[u(hk)][d(hk)]d[u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NKeyboardShortcuts>
+                                              <uix:NClick ClickType="Single" DisplayName="Click 'Guardar' A a la Z Frutas" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable DesignTimeRectangle="44, 8, 22, 22" FriendlyName="'Guardar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' role='Botón' automationid='' check:fulltext='Guardar' /&gt;" Guid="f6ddc130-407f-43be-ab88-17ac193d2f05" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVEhLYxh+4D+dwKhFZAOcFnVGriYL4wIELSIWjFoEB8PXooPLL0NFcIOTm29QbhGpGBcYXBYRAsSoHZwW4TIMm1p0MPAWHV59FcUAYjEugNMiaoNRi8gGw82i//8B/Dga0zA+DXwAAAAASUVORK5CYII=" InformativeScreenshot="702ad8e888cdbdf35e6154f1a7b71084.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NClick ClickType="Single" DisplayName="Click 'Cerrar' A a la Z Frutas" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0448ab24-ef38-4063-b049-b2330a97f5aa" Version="V1">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable DesignTimeRectangle="1345, 8, 29, 22" FriendlyName="'Cerrar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Cerrar' role='Botón' automationid='' check:fulltext='Cerrar' /&gt;" Guid="c618a4fd-984f-4f18-bd2b-e5119a048db1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAaCAYAAAA5WTUBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7ZXpbsJADIT91jwzZ0iAQMKRashYeA8WQ6O2PzqSBcr6+BbsWP6lGn5RRAghbrfbsF6vh/l8HljTNPQoC/FVVSXxdV3TIxQRHhBIsN1ukwR45hHid7tdEr/ZbO5nORFhhIDTfr9PEuBXeZbACj5t2ybxq9VquF6v9EpFBBEkOJ1O2QSXy4XuZeXiF4vFy3giiHRdl03Q9z1dyzqfz3f/OB55X4kIIsvlMkgAOx6PdEs1m834bbjf1MbjDJ+Hw4EeZRFBRBOooTeeCUXU8F+j6TTOnnlFhBDCMwm22HcAICI8IHArj9DItqg1zyRZEWGEwCiWRslKRzEG8MZbEWFsTO8k2EmKIT4REUQw4x7ZUYwB1N4VEXwLDKOoO8UW1Umyz94REV5D4L/WnWKLxUvNnnlFhDIEuh3FtA8UBJsyNwnvAEBEKEPgzWcBYN6l5hERnkPg1R0DYJLQoFOJCHkIjGwMgMnwTpJXREghcFOs8RigtNQ+FRHG94QaCtmlpIZn1m8KCyBwS7W4uBp6wfpNYQFEruhP2B+DEPkC5oEPSmAmubgAAAAASUVORK5CYII=" InformativeScreenshot="f89529695938b74ce8affd2c9d00b00c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="164, 8, 1065, 25" FriendlyName="'Barra de título'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' role='Barra de título' automationid='' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </uix:NApplicationCard.Body>
+                                        <uix:NApplicationCard.TargetApp>
+                                          <uix:TargetApp Area="-8, -8, 1382, 744" Arguments="c:\users\artur\desktop\2da evaluacion\documents\ejercicio_vb.xlsx" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGvSURBVFhH7Zc9SEJRGIZdo9B+pRoShwhChIoQhCBbgsgpGgJpKyKIaAmClqDBoSmyLQikrbaCppaksdvUGDQ1FjQ0fvlezpGjfefcn86FkF548Hr4vvO+nh/U2L+8lK6uO3XIL1O1gyA4wkYvzsQEY2JE2OjFmZjgTEwIG704ExOciQlhoxdnYoIzMSFs9Bo5LpEXqcpq+ADd+wWnDoWhZ3eWBjYKbojfBGAn90vH/CjFt/ON9zKIX/5WgNRhke5fnlz2bk4a4zOVtcY4ntUe6ytw+nBJ0MfXpxsIYzCG8Npabz0ATGEOle/OafFsx32GskcrTbUgkjOweVV2DRFEfnqE4WojO4TSGHp9f2NrQGQBrp9rwp7fe0l8OkXJpQkaLOVcuBoTbAC579gCeR6wLVyt9QA4hFhyCPsOIPVWqFgPwF1DGeji8bapFlgNoF45dcnlrYBQo/ZEcgaC0BYBQn8dJ7byPwIERfzs0KtzfIh0dGWGKZFLRxugd26MvEguT7KT+0HY6NW3kCET/cUsO7FfhI1eXJNNhI1eXJNNhI1e9SKntcki3n/N2lyx2De7iUsgzKBEqQAAAABJRU5ErkJggg==" InformativeScreenshot="d173157f521da552af9d7fb1bb863d48.png" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='Ejercicio_VB.xlsx - Excel'/&gt;" />
+                                        </uix:NApplicationCard.TargetApp>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NApplicationCard>
+                                    </Sequence>
+                                  </FlowStep>
+                                </FlowDecision.True>
+                                <FlowDecision.False>
+                                  <FlowStep x:Name="__ReferenceID16">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">680,314.5</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">780,314.5 780,198.5 630,198.5</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Bug alert Frutas" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Please select a box&quot;]">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:MessageBox>
+                                    <FlowStep.Next>
+                                      <FlowStep x:Name="__ReferenceID13">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <av:Point x:Key="ShapeLocation">430,144.5</av:Point>
+                                            <av:Size x:Key="ShapeSize">200,108</av:Size>
+                                            <av:PointCollection x:Key="ConnectorLocation">530,252.5 530,246.5 525.5,246.5</av:PointCollection>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:InputDialog OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Seleccionar el orden que desea en la columna de Frutas" DisplayName="Input Dialog Frutas" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="Choose the order" Options="[Arry_OrderFrutas]" Title="Order type">
+                                          <ui:InputDialog.Result>
+                                            <OutArgument x:TypeArguments="x:String">[str_orderFrutas]</OutArgument>
+                                          </ui:InputDialog.Result>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:InputDialog>
+                                        <FlowStep.Next>
+                                          <x:Reference>__ReferenceID12</x:Reference>
+                                        </FlowStep.Next>
+                                      </FlowStep>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowDecision.False>
+                              </FlowDecision>
+                            </FlowDecision.False>
+                          </FlowDecision>
+                          <x:Reference>__ReferenceID13</x:Reference>
+                          <x:Reference>__ReferenceID14</x:Reference>
+                          <x:Reference>__ReferenceID15</x:Reference>
+                          <x:Reference>__ReferenceID16</x:Reference>
+                          <x:Reference>__ReferenceID17</x:Reference>
+                        </Flowchart>
+                      </FlowStep>
+                    </FlowDecision.True>
+                    <FlowDecision.False>
+                      <FlowStep x:Name="__ReferenceID25">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">610,314.5</av:Point>
+                            <av:Size x:Key="ShapeSize">200,51</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">610,340 580,340 580,170 530,170</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Bug alert Colum " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Please select a box&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:MessageBox>
+                        <FlowStep.Next>
+                          <x:Reference>__ReferenceID18</x:Reference>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.False>
+                  </FlowDecision>
+                </FlowDecision.False>
+              </FlowDecision>
+            </FlowDecision.False>
+          </FlowDecision>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID19</x:Reference>
+      <x:Reference>__ReferenceID20</x:Reference>
+      <x:Reference>__ReferenceID21</x:Reference>
+      <x:Reference>__ReferenceID22</x:Reference>
+      <x:Reference>__ReferenceID23</x:Reference>
+      <x:Reference>__ReferenceID24</x:Reference>
+      <x:Reference>__ReferenceID25</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>

@@ -1,0 +1,248 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Font_format" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="654,854" sap2010:WorkflowViewState.IdRef="Font_format_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="52">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Font_format" sap:VirtualizedContainerService.HintSize="376,789" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_Range_Start" />
+      <Variable x:TypeArguments="x:String" Name="str_Range_End" />
+      <Variable x:TypeArguments="x:String" Name="str_Excel_File" />
+      <Variable x:TypeArguments="x:String" Name="str_Sheet" />
+      <Variable x:TypeArguments="x:String" Name="str_Font_Family" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;Arial&quot;,&quot;Calibri&quot;,&quot;Arial Black&quot;,&quot;Argelia&quot;}]" Name="Arry_FontFamily" />
+      <Variable x:TypeArguments="x:String" Name="str_FontFamily" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart sap2010:Annotation.AnnotationText="Seleccionar que tipo de formato le gustaria elegir" DisplayName="Font_Format Flowchart" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">390,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">420,77.5 420,124.5</av:PointCollection>
+          <x:Double x:Key="Width">1210</x:Double>
+          <x:Double x:Key="Height">773.5</x:Double>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID1</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID0">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">19,450</av:Point>
+            <av:Size x:Key="ShapeSize">262,60</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign DisplayName="Assign Font_Family" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[str_Font_Family]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[str_FontFamily]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </FlowStep>
+      <FlowStep x:Name="__ReferenceID1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">320,124.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,123</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">420,247.5 420,277.5 429.5,277.5 429.5,316.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InputDialog OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Le pregunta al usuario que formato le gustaria elegir para el tipo de letra que desea generar" DisplayName="Input Dialog Format" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Choose your FontFamily" Options="[Arry_FontFamily]" Title="FontFamily">
+          <ui:InputDialog.Result>
+            <OutArgument x:TypeArguments="x:String">[str_FontFamily]</OutArgument>
+          </ui:InputDialog.Result>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InputDialog>
+        <FlowStep.Next>
+          <FlowDecision x:Name="__ReferenceID2" Condition="[str_FontFamily = &quot;Arial&quot;]" DisplayName="Decision Arial" sap:VirtualizedContainerService.HintSize="78,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <av:Point x:Key="ShapeLocation">390.5,316.5</av:Point>
+                <av:Size x:Key="ShapeSize">78,87</av:Size>
+                <av:PointCollection x:Key="FalseConnector">468.5,360 494.5,360 494.5,416.5 434.5,416.5 434.5,446.5</av:PointCollection>
+                <av:PointCollection x:Key="TrueConnector">390.5,360 360.5,360 360.5,480 281,480</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <FlowDecision.False>
+              <FlowDecision x:Name="__ReferenceID4" Condition="[str_FontFamily=&quot;Calibri&quot;]" DisplayName="Decision Calibri" sap:VirtualizedContainerService.HintSize="88,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID0}">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <av:Point x:Key="ShapeLocation">390.5,446.5</av:Point>
+                    <av:Size x:Key="ShapeSize">88,87</av:Size>
+                    <av:PointCollection x:Key="FalseConnector">478.5,490 508.5,490 508.5,536.5 455,536.5 455,566.5</av:PointCollection>
+                    <av:PointCollection x:Key="TrueConnector">390.5,490 360.5,490 360.5,480 281,480</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <FlowDecision.False>
+                  <FlowDecision x:Name="__ReferenceID5" Condition="[str_FontFamily=&quot;Arial Black&quot;]" DisplayName="Decision Arial Black" sap:VirtualizedContainerService.HintSize="109,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID0}">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">400.5,566.5</av:Point>
+                        <av:Size x:Key="ShapeSize">109,87</av:Size>
+                        <av:PointCollection x:Key="FalseConnector">509.5,610 536,610 536,656.5 446,656.5 446,686.5</av:PointCollection>
+                        <av:PointCollection x:Key="TrueConnector">400.5,610 370.5,610 370.5,480 281,480</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <FlowDecision.False>
+                      <FlowDecision x:Name="__ReferenceID6" Condition="[str_FontFamily=&quot;Argelia&quot;]" DisplayName="Decision Argelia" sap:VirtualizedContainerService.HintSize="91,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4" True="{x:Reference __ReferenceID0}">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <av:Point x:Key="ShapeLocation">400.5,686.5</av:Point>
+                            <av:Size x:Key="ShapeSize">91,87</av:Size>
+                            <av:PointCollection x:Key="FalseConnector">491.5,730 670,730 670,505.5</av:PointCollection>
+                            <av:PointCollection x:Key="TrueConnector">400.5,730 370.5,730 370.5,480 281,480</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <FlowDecision.False>
+                          <FlowStep x:Name="__ReferenceID3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">570,454.5</av:Point>
+                                <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">670,454.5 670,186 520,186</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Bug alert Format" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please select a box&quot;]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:MessageBox>
+                            <FlowStep.Next>
+                              <x:Reference>__ReferenceID1</x:Reference>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowDecision.False>
+                      </FlowDecision>
+                    </FlowDecision.False>
+                  </FlowDecision>
+                </FlowDecision.False>
+              </FlowDecision>
+            </FlowDecision.False>
+          </FlowDecision>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+    </Flowchart>
+    <Assign DisplayName="Assign Rango a iniciar" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str_Range_Start]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">A</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign Rango a terminar" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str_Range_End]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">C</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign direccion del archivo excel" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str_Excel_File]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">C:\Users\artur\Desktop\2da evaluacion\documents\Ejercicio_VB.xlsx</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign Hoja del archivo de excel" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[str_Sheet]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Hoja1</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xA;&#x9;Dim Excel As Microsoft.Office.Interop.Excel.Application&#xA;&#x9;Dim Workbook As Microsoft.Office.Interop.Excel.Workbook&#xA;&#x9;Dim Worksheet As Microsoft.Office.Interop.Excel.Worksheet&#xA;&#x9;Dim range As Microsoft.Office.Interop.Excel.Range&#xA;&#x9;Dim range2 As Microsoft.Office.Interop.Excel.Range&#xA;&#x9;&#xA;&#x9;Console.WriteLine(&quot;iniciar excel&quot;)&#xA;&#x9;'Mostrar visibilidad de excelo&#xA;&#x9;Excel = New Microsoft.Office.Interop.Excel.Application&#xA;&#x9;Excel.Visible = True&#xA;&#xA;&#x9;'abrir excel&#xA;&#x9;Workbook = Excel.Workbooks.Open(str_Excel_File)&#xA;&#x9;&#xA;&#xA;&#x9;'tomar hoja de excel&#xA;&#x9;Worksheet = CType(Workbook.Sheets(str_Sheet),Microsoft.Office.Interop.Excel.Worksheet)&#xA;&#x9;Worksheet.Activate()&#xA;&#xA;&#x9;'Tomar rango&#xA;&#x9;range  = Worksheet.Range(str_Range_Start + &quot;:&quot; + str_Range_End)&#xA;&#x9;&#xA;&#x9;'Set font name&#xA;&#x9;range.Font.Name = str_Font_Family&#xA;&#x9;&#xA;&#x9;'Guardar &#xA;&#x9;Workbook.Save&#xA;&#xA;&#x9;'Cerrar archivo&#xA;&#x9;Workbook.Close&#xA;&#xA;&#x9;'Cerrar aplicacion&#xA;&#x9;Excel.Quit&#xA;Catch ex As Exception&#xA;&#x9;Console.WriteLine(ex.Message)&#xA;End Try" DisplayName="Invoke code Font_Format" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="str_Range_Start">[str_Range_Start]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_Range_End">[str_Range_End]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_Excel_File">[str_Excel_File]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_Font_Family">[str_Font_Family]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_Sheet">[str_Sheet]</InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+  </Sequence>
+</Activity>
